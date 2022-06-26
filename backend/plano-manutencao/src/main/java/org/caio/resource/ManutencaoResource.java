@@ -1,6 +1,7 @@
 package org.caio.resource;
 
 import org.caio.model.Manutencao;
+import org.caio.repository.ManutencaoRepository;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -14,7 +15,7 @@ import java.util.List;
 public class ManutencaoResource {
 
     @Inject
-    Manutencao manutencao;
+    ManutencaoRepository manutencaoRepository;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -24,7 +25,7 @@ public class ManutencaoResource {
 
     @GET
     @Path("/{id}")
-    public List<Manutencao> listaEspecifico(@PathParam String id) {
-        return List<this.manutencao> listaEspecifico(id);
+    public List<Manutencao> listaEspecifico(@PathParam("id") String id) {
+        return List<manutencaoRepository> listaEspecifico(id);
     }
 }
