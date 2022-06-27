@@ -2,16 +2,24 @@ package org.caio.model;
 
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.ws.rs.GET;
 import java.time.LocalDateTime;
 
 @ApplicationScoped
 @Entity
-public class Manutencao extends PanacheEntity {
+public class Manutencao extends PanacheEntityBase {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @Column
     private Integer idMecanico;
@@ -27,6 +35,14 @@ public class Manutencao extends PanacheEntity {
 
     @Column
     private String maquina;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Integer getIdMecanico() {
         return idMecanico;
