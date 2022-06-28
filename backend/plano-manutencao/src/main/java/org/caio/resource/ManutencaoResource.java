@@ -16,6 +16,7 @@ import static org.jboss.resteasy.reactive.RestResponse.Status.NOT_FOUND;
 
 @Path("/manutencao")
 @Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class ManutencaoResource {
 
     @Inject
