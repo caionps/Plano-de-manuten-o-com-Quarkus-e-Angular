@@ -3,15 +3,16 @@ package org.caio.dto;
 import org.caio.model.Manutencao;
 
 import javax.enterprise.context.ApplicationScoped;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
-@ApplicationScoped
+
 public class ManutencaoDTO {
     private Integer idMecanico;
-    private LocalDateTime primeiraManutencao;
+    private LocalDate primeiraManutencao;
     private Integer frequencia;
     private String atividade;
     private String maquina;
+
 
     public ManutencaoDTO (Manutencao manutencao) {
         this.idMecanico = manutencao.getIdMecanico();

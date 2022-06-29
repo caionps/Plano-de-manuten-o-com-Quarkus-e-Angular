@@ -4,18 +4,19 @@ package org.caio.model;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
+
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.ws.rs.GET;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
-@ApplicationScoped
+
 @Entity
-public class Manutencao extends PanacheEntityBase {
+public class Manutencao {
 
     @Id
     @GeneratedValue
@@ -25,7 +26,7 @@ public class Manutencao extends PanacheEntityBase {
     private Integer idMecanico;
 
     @Column
-    private LocalDateTime primeiraManutencao;
+    private LocalDate primeiraManutencao;
 
     @Column
     private Integer frequencia;
@@ -52,11 +53,11 @@ public class Manutencao extends PanacheEntityBase {
         this.idMecanico = idMecanico;
     }
 
-    public LocalDateTime getPrimeiraManutencao() {
+    public LocalDate getPrimeiraManutencao() {
         return primeiraManutencao;
     }
 
-    public void setPrimeiraManutencao(LocalDateTime primeiraManutencao) {
+    public void setPrimeiraManutencao(LocalDate primeiraManutencao) {
         this.primeiraManutencao = primeiraManutencao;
     }
 
