@@ -2,7 +2,6 @@ package org.caio.dto;
 
 import org.caio.model.Manutencao;
 
-import javax.enterprise.context.ApplicationScoped;
 import java.time.LocalDate;
 
 
