@@ -2,6 +2,7 @@ package org.caio.resource;
 
 import org.caio.model.Manutencao;
 import org.caio.repository.ManutencaoRepository;
+import org.caio.service.ManutencaoService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -23,6 +24,7 @@ public class ManutencaoResource {
 
     @Inject
     ManutencaoRepository manutencaoRepository;
+    ManutencaoService manutencaoService;
 
     @GET
     public Response listaTodos() {
@@ -32,10 +34,11 @@ public class ManutencaoResource {
 
     @GET
     @Path("/{id}")
-    public Response listaIdEspecifico(@PathParam("id") Long id) {
-        return manutencaoRepository.findByIdOptional(id)
-                .map(manutencao -> Response.ok(manutencao).build())
-                .orElse(Response.status(NOT_FOUND).build());
+    public Response listaIdEspecifico(Long id) {
+        if (id == null) {
+            throw new BadRequestException();
+        }
+        return manutencaoService.findId(id);
     }
 
     @POST
