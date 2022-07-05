@@ -3,9 +3,9 @@ package org.caio.exception;
 import org.caio.model.Manutencao;
 
 public class ManutencaoException extends RuntimeException{
-    public final String name;
+    public final Long id;
 
-    public ManutencaoException(String name) {
-        this.name = name;
+    public ManutencaoException(Long id) {
+        this.id = id;
     }
 }

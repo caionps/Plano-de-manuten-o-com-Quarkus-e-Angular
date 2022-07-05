@@ -8,6 +8,6 @@ import javax.ws.rs.core.Response;
 public class ManutencaoExceptionMapper {
     @ServerExceptionMapper
     public RestResponse<String> mapException(ManutencaoException x){
-        return RestResponse.status(Response.Status.NOT_FOUND, x.name);
+        return RestResponse.status(Response.Status.NOT_FOUND, "O id " + x.id + " não está cadastrado");
     }
 }
