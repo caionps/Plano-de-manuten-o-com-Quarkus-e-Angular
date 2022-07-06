@@ -8,13 +8,10 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.net.URI;
 import java.util.List;
-
-import static javax.ws.rs.core.Response.Status.NOT_FOUND;
+import java.util.Optional;
 
 @Path("/manutencao")
 @ApplicationScoped
@@ -34,11 +31,9 @@ public class ManutencaoResource {
 
     @GET
     @Path("/{id}")
-    public Response listaIdEspecifico(Long id) {
-        if (id == null) {
-            throw new BadRequestException();
-        }
-        return manutencaoService.findId(id);
+    public Response findId(@PathParam("id") Long id) {
+
+        return Response.ok().entity(manutencaoService.findId(id)).build();
     }
 
     @POST
