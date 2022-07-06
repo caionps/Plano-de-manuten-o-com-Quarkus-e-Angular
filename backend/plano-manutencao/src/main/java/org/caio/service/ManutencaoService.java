@@ -14,13 +14,17 @@ import java.util.Optional;
 public class ManutencaoService {
     @Inject
     ManutencaoRepository manutencaoRepository;
-    ManutencaoDTO manutencaoDTO;
 
-    public Optional<Manutencao> findId (Long id) {
-
-        Optional<Manutencao> manutencao = manutencaoRepository.findById(id);
-        manutencao.orElseThrow(() -> new ManutencaoException(id));
-
-        return manutencao;
+    public Manutencao findId (Long id) {
+        return manutencaoRepository.findByIdOptional(id).orElseThrow(() -> new ManutencaoException(id));
     }
+
+//    public void update(long id, Manutencao manutencao) {
+//        try{
+//            manutencaoRepository.update(manutencao);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            throw new ManutencaoException(id, manutencao);
+//        }
+//    }
 }

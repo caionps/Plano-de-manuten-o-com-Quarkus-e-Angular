@@ -1,5 +1,6 @@
 package org.caio.resource;
 
+import org.caio.exception.ManutencaoException;
 import org.caio.model.Manutencao;
 import org.caio.repository.ManutencaoRepository;
 import org.caio.service.ManutencaoService;
@@ -21,6 +22,7 @@ public class ManutencaoResource {
 
     @Inject
     ManutencaoRepository manutencaoRepository;
+    @Inject
     ManutencaoService manutencaoService;
 
     @GET
@@ -37,10 +39,28 @@ public class ManutencaoResource {
     }
 
     @POST
-    @Path("/teste")
     @Transactional
     public Response criarManutencao(Manutencao manutencao) {
         manutencaoRepository.persist(manutencao);
+        return Response.ok().build();
+    }
+
+    @PUT
+    @Path("/{id}")
+    @Transactional
+    public Response alterarManutencao(@PathParam("id") Long id, Manutencao manutencao) {
+        Manutencao manutencaoEntity = manutencaoService.findId(id);
+
+        if(manutencaoEntity == null) {
+            throw new ManutencaoException(id);
+        }
+
+        manutencaoEntity.setPrimeiraManutencao(manutencao.getPrimeiraManutencao());
+        manutencaoEntity.setAtividade(manutencao.getAtividade());
+        manutencaoEntity.setFrequencia(manutencao.getFrequencia());
+        manutencaoEntity.setMaquina(manutencao.getMaquina());
+        manutencaoEntity.setIdMecanico(manutencao.getIdMecanico());
+
         return Response.ok().build();
     }
 }
