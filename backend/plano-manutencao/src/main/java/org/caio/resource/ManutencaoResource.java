@@ -49,11 +49,17 @@ public class ManutencaoResource {
     @Path("/{id}")
     @Transactional
     public Response alterarManutencao(@PathParam("id") Long id, Manutencao manutencao) {
-        Manutencao manutencaoEntity = manutencaoService.findId(id);
+        Manutencao manutencaoEntity = manutencaoRepository.update(id, manutencao);
 
-        if(manutencaoEntity == null) {
-            throw new ManutencaoException(id);
-        }
+        return Response.ok(manutencaoEntity).build();
+
+        manutencaoRepository.update("UPDATE manutencao SET " +
+                "PrimeiraManutencao = ? " +
+                "Atividade = ? " +
+                "Frequencia = ? " +
+                "Maquina = ? " +
+                "IdMecanico = ? WHERE ?" , manutencaoEntity);
+
 
         manutencaoEntity.setPrimeiraManutencao(manutencao.getPrimeiraManutencao());
         manutencaoEntity.setAtividade(manutencao.getAtividade());

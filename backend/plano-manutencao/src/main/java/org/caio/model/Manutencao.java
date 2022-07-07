@@ -6,15 +6,10 @@ import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Default;
-import javax.inject.Inject;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
-@ApplicationScoped
+@Table(name = "manutencao")
 @Entity
 public class Manutencao {
 
