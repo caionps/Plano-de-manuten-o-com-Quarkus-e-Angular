@@ -6,6 +6,7 @@ import org.caio.repository.ManutencaoRepository;
 import org.caio.service.ManutencaoService;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
@@ -49,17 +50,7 @@ public class ManutencaoResource {
     @Path("/{id}")
     @Transactional
     public Response alterarManutencao(@PathParam("id") Long id, Manutencao manutencao) {
-        Manutencao manutencaoEntity = manutencaoRepository.update(id, manutencao);
-
-        return Response.ok(manutencaoEntity).build();
-
-        manutencaoRepository.update("UPDATE manutencao SET " +
-                "PrimeiraManutencao = ? " +
-                "Atividade = ? " +
-                "Frequencia = ? " +
-                "Maquina = ? " +
-                "IdMecanico = ? WHERE ?" , manutencaoEntity);
-
+        Manutencao manutencaoEntity = manutencaoRepository.findById(id);
 
         manutencaoEntity.setPrimeiraManutencao(manutencao.getPrimeiraManutencao());
         manutencaoEntity.setAtividade(manutencao.getAtividade());
@@ -69,4 +60,13 @@ public class ManutencaoResource {
 
         return Response.ok().build();
     }
+
+    @DELETE
+    @Path("/{id}")
+    @Transactional
+    public Response deletarManutencao(@PathParam("id") Long id) {
+        boolean deleted = manutencaoRepository.deleteById(id);
+        return Response.ok().build();
+    }
+
 }

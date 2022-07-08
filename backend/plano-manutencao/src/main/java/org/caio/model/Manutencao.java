@@ -1,11 +1,5 @@
 package org.caio.model;
 
-
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-
-
-import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.*;
 import java.time.LocalDate;
 

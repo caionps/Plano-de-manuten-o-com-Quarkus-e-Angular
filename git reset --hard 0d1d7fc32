@@ -1,0 +1,89 @@
+[33mcommit eac8911869b7851bba230d238ddd3745e2e4787e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: caio.nepos@gmail.com <caio.nepos@gmail.com>
+Date:   Thu Jul 7 11:51:54 2022 -0300
+
+    tentativa de update com panache
+
+[33mcommit 75da2a1faf8cdf4622aac5590bd9b7b9f879c333[m
+Author: caio.nepos@gmail.com <caio.nepos@gmail.com>
+Date:   Wed Jul 6 11:49:00 2022 -0300
+
+    post finalizado
+
+[33mcommit 611ae0538949a08b75bef3754b0d5cc4e3570f01[m
+Author: caionps <caio.nepos@gmail.com>
+Date:   Tue Jul 5 22:06:56 2022 -0300
+
+    Optional adicionado
+
+[33mcommit 8cff4df58c9e0a2120b83032efb849ab6c8f1aa8[m
+Author: caio.nepos@gmail.com <caio.nepos@gmail.com>
+Date:   Tue Jul 5 11:46:36 2022 -0300
+
+    exception mapper quase finalizado
+
+[33mcommit 6c065fd9ac4cd2f096187bd602f276fa4443d17e[m
+Author: caio.nepos@gmail.com <caio.nepos@gmail.com>
+Date:   Mon Jul 4 11:48:42 2022 -0300
+
+    Exception Mapper iniciado
+
+[33mcommit 0ec7fd68c73351760775f622827f761088b625f4[m
+Author: caio.nepos <caio.nepos@gmail.com>
+Date:   Fri Jul 1 11:50:28 2022 -0300
+
+    exceptio iniciado
+
+[33mcommit 91625496e3a9bb4a335b1a925d800f6a0aa7e4ed[m
+Author: caio.nepos <caio.nepos@gmail.com>
+Date:   Thu Jun 30 11:54:17 2022 -0300
+
+    Exception mapper iniciado
+
+[33mcommit a1dce4bc14d55e574a74a3f78a39bee826f8d232[m
+Author: caio.nepos <caio.nepos@gmail.com>
+Date:   Wed Jun 29 11:48:26 2022 -0300
+
+    bug do 415 consertado
+
+[33mcommit 166b8cb546b84a0e39cff3f1decf14eb270f1511[m
+Author: caionps <caio.nepos@gmail.com>
+Date:   Mon Jun 27 22:10:06 2022 -0300
+
+    inicio da resolução da resposta 415
+
+[33mcommit ebef5d7217a41a7313e4adcc3112e27e7ff51f62[m
+Author: caionps <caio.nepos@gmail.com>
+Date:   Mon Jun 27 21:40:08 2022 -0300
+
+    Corrigido erro ao subir banco de dados
+
+[33mcommit 1747b79f7312ce22b7f6d1b3b04253ea50011afa[m
+Author: caio.nepos <caio.nepos@gmail.com>
+Date:   Mon Jun 27 11:51:58 2022 -0300
+
+    application.properties ainda com problemas
+
+[33mcommit ff73de68e4d50c3e972b9477d2efc8c413849a08[m
+Author: caionps <caio.nepos@gmail.com>
+Date:   Sun Jun 26 20:50:52 2022 -0300
+
+    termino do fim de semana
+
+[33mcommit b10c5de428c8d78f4056ddc27f4f11546c167c31[m
+Author: caio.nepos <caio.nepos@gmail.com>
+Date:   Fri Jun 24 11:45:34 2022 -0300
+
+    model do back iniciado
+
+[33mcommit 9555e6c62395ff00fccc86f60bd2f8c26cfe0be9[m
+Author: caio.nepos <caio.nepos@gmail.com>
+Date:   Thu Jun 23 12:03:14 2022 -0300
+
+    frontend inicializado
+
+[33mcommit 684468aca704ba56b878dff04bb4ce3e7a7c442d[m
+Author: caio.nepos <caio.nepos@gmail.com>
+Date:   Thu Jun 23 11:45:04 2022 -0300
+
+    projeto quarkus angular iniciado

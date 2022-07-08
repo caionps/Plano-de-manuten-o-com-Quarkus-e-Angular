@@ -5,7 +5,7 @@ import org.caio.model.Manutencao;
 import javax.enterprise.context.ApplicationScoped;
 import java.time.LocalDate;
 
-@ApplicationScoped
+
 public class ManutencaoDTO {
     private Long id;
     private Integer idMecanico;
